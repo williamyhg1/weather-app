@@ -5,6 +5,7 @@ const App = () => {
   const apiKey = "aec9fee4a26accaeb55d650fc82fbd07";
   const [weatherData, setWeatherData] = useState({});
   const [city, setCity] = useState("");
+  
   const getWeather = (event) => {
     if (event.key === "Enter") {
       fetch(
@@ -17,9 +18,14 @@ const App = () => {
         });
     }
   };
+
+  
+  
+
+
   return (
     <div className="app">
-      <main>
+      <main className={(typeof weatherData.main == 'undefined')?'default':(weatherData.weather[0].main)}>
         <div className="search-box">
           <input
             type="text"
@@ -39,6 +45,7 @@ const App = () => {
         ) : (
           <div className="weather-data">
             <p className="city">{weatherData.name}</p>
+            <p className="time">Time</p>
             <p className="temp">{Math.round(weatherData.main.temp)}°C</p>
             <p className="weather">{weatherData.weather[0].main}</p>
           </div>

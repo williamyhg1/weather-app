@@ -9,7 +9,6 @@ body {
 }
 
 
-
 .app{
   background-image: url('./img/day.webp');
   background-size: cover;
@@ -28,9 +27,8 @@ body {
 }
 
 main {
-  min-height: 60vh;
-  width: 50vw;
-  background-image: url('./img/cloudy.webp');
+  height: 80vh;
+  width: 30vw;;
   background-size: cover;
   background-position: bottom;
   transition: 1s ease-out;
@@ -39,6 +37,33 @@ main {
   box-shadow: grey;
 }
 
+.default {
+  background-image: url('./img/default.jpeg')
+}
+
+.Clouds {
+  background-image: url('./img/cloudy.jpeg');
+}
+
+.Clear {
+  background-image: url('./img/sunny.webp');
+}
+
+.Rain {
+  background-image: url('./img/rainning.webp');
+}
+
+.Smoke {
+  background-image: url('./img/smog.jpeg');
+}
+
+.Drizzle {
+  background-image: url('./img/drizzle.jpeg')
+}
+
+.Snow {
+  background-image: url('./img/snow.jpeg')
+}
 
 .search-box {
   width: 100%;
@@ -70,39 +95,33 @@ main {
   background-color:rgba(255,255,255);
 }
 
-.welcome-message {
+.welcome-message,
+.error {
   padding: 2rem;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: white;
 }
 
 .weather-data {
-  color: white;
-  margin: 4rem;
-  padding: 4rem;
+  color: rgba(0, 0, 0, 0.75);
+  margin: 2rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 600;
-  gap: 2rem;
-  border-radius: 8px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  gap: 4rem;
 }
 
-.city {
-  opacity: .8;
+.city,
+.time,
+.weather {
+  opacity: .7;
 }
 
 .temp {
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
-.weather {
-  opacity: .8;
-}
-
-.error {
-  font-size: 2rem;
-}
