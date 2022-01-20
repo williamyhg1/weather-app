@@ -7,8 +7,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: bisque;
-  
+  background: linear-gradient(75deg, rgba(243, 119, 81, 0.5),rgba(161, 238, 130, 0.5), rgba(144, 134, 236, 0.5));
+  width: 100vw;
+  height: 100vh;
 }
 
 code {
