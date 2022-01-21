@@ -29,7 +29,7 @@ const App = () => {
 
 
   return (
-    <div className="app">
+    <div className='app night'>
       <main className={(typeof weatherData.main == 'undefined')?'default':(weatherData.weather[0].main)}>
         <div className="search-box">
           <input
