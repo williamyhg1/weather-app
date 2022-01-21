@@ -23,7 +23,7 @@ body {
 }
 
 .app.night {
-  background-image: url('./img/night.webp');
+  background-image: url('./img/night.jpeg');
 }
 
 main {
@@ -38,7 +38,7 @@ main {
 }
 
 .default {
-  background-image: url('./img/default.jpeg')
+  background-image: url('./img/default.webp')
 }
 
 .Clouds {
@@ -97,22 +97,22 @@ main {
 
 .welcome-message,
 .error {
-  padding: 2rem;
+  padding: 1.5rem;
   font-size: 2rem;
   color: white;
 }
 
 .weather-data {
   color: rgba(0, 0, 0, 0.75);
-  margin: 2rem;
-  padding: 0;
+  margin: 1rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 3rem;
   font-weight: 600;
-  gap: 4rem;
+  gap: 3rem;
 }
 
 .city,
@@ -122,5 +122,5 @@ main {
 }
 
 .temp {
-  font-size: 6rem;
+  font-size: 5rem;
 }
