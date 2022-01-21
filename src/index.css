@@ -13,7 +13,7 @@ body {
   background-image: url('./img/day.webp');
   background-size: cover;
   background-position: bottom;
-  transition: 0.5s ease-out;
+  transition: 1s ease-out;
   min-height: 100vh;
   display:flex;
   flex-direction: column;
@@ -23,12 +23,12 @@ body {
 }
 
 .app.night {
-  background-image: url('./img/night.jpeg');
+  background-image: url('./img/night.webp');
 }
 
 main {
-  height: 80vh;
-  width: 30vw;;
+  min-height: 70vh;
+  min-width: 30vw;;
   background-size: cover;
   background-position: bottom;
   transition: 1s ease-out;
@@ -55,7 +55,8 @@ main {
 
 .Smoke,
 .Haze,
-.Mist {
+.Mist,
+.Fog {
   background-image: url('./img/smoke.jpeg');
 }
 
