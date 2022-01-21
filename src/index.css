@@ -34,7 +34,7 @@ main {
   transition: 1s ease-out;
   padding: 25px;
   border-radius: 10px;
-  box-shadow: grey;
+  box-shadow:  5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .default {
@@ -53,16 +53,19 @@ main {
   background-image: url('./img/rainning.jpeg');
 }
 
-.Smoke {
-  background-image: url('./img/smog.jpeg');
+.Smoke,
+.Haze,
+.Mist {
+  background-image: url('./img/smoke.jpeg');
 }
 
 .Drizzle {
   background-image: url('./img/drizzle.jpeg')
 }
 
-.Snow {
-  background-image: url('./img/snow.jpeg')
+.Snow
+{
+  background-image: url('./img/snow.jpeg');
 }
 
 .search-box {
@@ -84,7 +87,7 @@ main {
   border-radius: 0px 0px 16px 16px;
   margin-top: -25px;
 
-  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
   
   color: #313131;
   font-size: 2rem;
@@ -103,8 +106,8 @@ main {
 }
 
 .weather-data {
-  color: rgba(0, 0, 0, 0.75);
-  margin: 1rem;
+  color: black;
+  margin-top: -1.5rem;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -118,8 +121,10 @@ main {
 .city,
 .time,
 .weather {
-  opacity: .7;
+  opacity: .6;
 }
+
+
 
 .temp {
   font-size: 5rem;
