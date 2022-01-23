@@ -10,7 +10,6 @@ body {
 
 
 .app{
-  background-image: url('./img/day.webp');
   background-size: cover;
   background-position: bottom;
   transition: 1s ease-out;
@@ -20,9 +19,15 @@ body {
   justify-content: center;
   align-items: center;
   padding: 4rem;
+  
 }
 
-.app.night {
+.day {
+  background-image: url('./img/day.webp');
+}
+
+
+.night {
   background-image: url('./img/night.webp');
 }
 
@@ -47,7 +52,7 @@ main {
 }
 
 .Clear {
-  background-image: url('./img/sunny.webp');
+  background-image: url('./img/clear.jpeg');
 }
 
 .Rain {

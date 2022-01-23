@@ -31,7 +31,10 @@ const App = () => {
   (timezoneInMinutes).format("HH:mm:ss"); 
 
   
+
+  
   const [time, setTime] = useState('')
+
 
   useEffect(() => {
       const timer = setInterval(()=>setTime(currentTime),1000)
@@ -40,10 +43,10 @@ const App = () => {
       }
     });
    
- 
+ console.log(time)
 
   return (
-    <div className='app night'>
+    <div className={(parseInt(`${time[0]}${time[1]}`) >= 6 && parseInt(`${time[0]}${time[1]}`) <= 18)?'app day':((parseInt(`${time[0]}${time[1]}`) < 6 || parseInt(`${time[0]}${time[1]}`) > 18)?'app night':'app day')}>
       <main className={(typeof weatherData.main == 'undefined')?'default':(weatherData.weather[0].main)}>
         <div className="search-box">
           <input
