@@ -74,7 +74,7 @@ const App = () => {
         )}
 
         {weatherData.cod === "404" ? (
-          <p className="error">City not found! Please try again...</p>
+          <p className="error">City not found! Please try again.</p>
         ) : (
           <></>
         )}
