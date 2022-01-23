@@ -1,83 +1,79 @@
 * {
-  margin:0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
- font-family: 'montseratt',sans-serif;
+  font-family: "montseratt", sans-serif;
 }
 
-
-.app{
+.app {
   background-size: cover;
   background-position: bottom;
   transition: 1s ease-out;
   min-height: 100vh;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 4rem;
-  
 }
 
 .day {
-  background-image: url('./img/day.webp');
+  background-image: url("./img/day.webp");
 }
 
-
 .night {
-  background-image: url('./img/night.webp');
+  background-image: url("./img/night.webp");
 }
 
 main {
   min-height: 70vh;
-  min-width: 30vw;;
+  min-width: 30vw;
   max-width: 45vw;
   background-size: cover;
   background-position: bottom;
   transition: 1s ease-out;
   padding: 25px;
   border-radius: 10px;
-  box-shadow:  5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .default {
-  background-image: url('./img/default.webp')
+  background-image: url("./img/default.webp");
 }
 
 .Clouds {
-  background-image: url('./img/cloudy.jpeg');
+  background-image: url("./img/cloudy.jpeg");
 }
 
 .Clear {
-  background-image: url('./img/clear.jpeg');
+  background-image: url("./img/clear.jpeg");
 }
 
 .Rain {
-  background-image: url('./img/rainning.jpeg');
+  background-image: url("./img/rainning.jpeg");
 }
 
 .Smoke,
 .Haze,
 .Mist,
 .Fog {
-  background-image: url('./img/smoke.jpeg');
+  background-image: url("./img/smoke.jpeg");
 }
 
 .Drizzle {
-  background-image: url('./img/drizzle.jpeg')
+  background-image: url("./img/drizzle.jpeg");
 }
 
-.Snow
-{
-  background-image: url('./img/snow.jpeg');
+.Snow {
+  background-image: url("./img/snow.jpeg");
 }
 
 .search-box {
   width: 100%;
-  margin:0 0 75px
+  margin: 0 0 75px;
 }
 
 .search-box .search-bar {
@@ -87,22 +83,21 @@ main {
 
   appearance: none;
   background: none;
-  border:none;
-  outline:none;
+  border: none;
+  outline: none;
 
-  background-color: rgba(255,255,255, .75) ;
+  background-color: rgba(255, 255, 255, 0.75);
   border-radius: 0px 0px 16px 16px;
   margin-top: -25px;
 
   box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
-  
+
   color: #313131;
   font-size: 2rem;
-  
 }
 
 .search-bar:focus {
-  background-color:rgba(255,255,255);
+  background-color: rgba(255, 255, 255);
 }
 
 .welcome-message,
@@ -129,10 +124,8 @@ main {
 .city,
 .time,
 .weather {
-  opacity: .6;
+  opacity: 0.6;
 }
-
-
 
 .temp {
   font-size: 5rem;

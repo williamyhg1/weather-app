@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
-import moment from 'moment';
-
+import moment from "moment";
 
 const App = () => {
   const apiKey = "aec9fee4a26accaeb55d650fc82fbd07";
   const [weatherData, setWeatherData] = useState({});
-  const [city, setCity] = useState('');
-  
-  
-  
-  
+  const [city, setCity] = useState("");
+  const timezone = weatherData.timezone;
+  const timezoneInMinutes = timezone / 60;
+  const currentTime = moment().utcOffset(timezoneInMinutes).format("HH:mm:ss");
+  const [time, setTime] = useState("");
+  const hours = parseInt(`${time[0]}${time[1]}`);
+
   const getWeather = (event) => {
     if (event.key === "Enter") {
       fetch(
@@ -24,30 +25,30 @@ const App = () => {
     }
   };
 
-  
-  const timezone = weatherData.timezone;
-  const timezoneInMinutes = timezone / 60;
-  const currentTime = moment().utcOffset
-  (timezoneInMinutes).format("HH:mm:ss"); 
-
-  
-
-  
-  const [time, setTime] = useState('')
-
-
   useEffect(() => {
-      const timer = setInterval(()=>setTime(currentTime),1000)
-      return () => {
-        clearInterval(timer)
-      }
-    });
-   
- console.log(time)
+    const timer = setInterval(() => setTime(currentTime), 1000);
+    return () => {
+      clearInterval(timer);
+    };
+  });
 
   return (
-    <div className={(parseInt(`${time[0]}${time[1]}`) >= 6 && parseInt(`${time[0]}${time[1]}`) <= 18)?'app day':((parseInt(`${time[0]}${time[1]}`) < 6 || parseInt(`${time[0]}${time[1]}`) > 18)?'app night':'app day')}>
-      <main className={(typeof weatherData.main == 'undefined')?'default':(weatherData.weather[0].main)}>
+    <div
+      className={
+        hours >= 6 && hours <= 18
+          ? "app day"
+          : hours < 6 || hours > 18
+          ? "app night"
+          : "app day"
+      }
+    >
+      <main
+        className={
+          typeof weatherData.main == "undefined"
+            ? "default"
+            : weatherData.weather[0].main
+        }
+      >
         <div className="search-box">
           <input
             type="text"
