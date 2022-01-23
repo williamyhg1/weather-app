@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import "./index.css";
-import DateTime from "./time";
+import moment from 'moment';
+// import DateTime from "./time";
 
 const App = () => {
   const apiKey = "aec9fee4a26accaeb55d650fc82fbd07";
   const [weatherData, setWeatherData] = useState({});
   const [city, setCity] = useState("");
-  
 
   
-
-
+  
   const getWeather = (event) => {
     if (event.key === "Enter") {
       fetch(
@@ -24,9 +23,9 @@ const App = () => {
     }
   };
 
-  
-  
-
+  const timezone = weatherData.timezone;
+  const timezoneInMinutes = timezone / 60;
+  const currentTime = moment().utcOffset(timezoneInMinutes).format("h:mm A");
 
   return (
     <div className='app night'>
@@ -50,7 +49,7 @@ const App = () => {
         ) : (
           <div className="weather-data">
             <p className="city">{weatherData.name}</p>
-            <DateTime />
+            <p>{currentTime}</p>
             <p className="temp">{Math.round(weatherData.main.temp)}°C</p>
             <p className="weather">{weatherData.weather[0].main}</p>
           </div>
