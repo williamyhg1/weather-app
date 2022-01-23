@@ -60,10 +60,9 @@ const App = () => {
           />
         </div>
         {typeof weatherData.main === "undefined" ? (
-          <div>
-            <p className="welcome-message">
-              Welcome to weather app! Enter a city name to start...
-            </p>
+          <div className="welcome-message">
+            <p>Welcome to weather app! </p><br />
+            <p>Enter a city name to start...</p>
           </div>
         ) : (
           <div className="weather-data">
