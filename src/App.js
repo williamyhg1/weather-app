@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./index.css";
 import moment from "moment";
 
+
 const App = () => {
-  const apiKey = "aec9fee4a26accaeb55d650fc82fbd07";
+  const apiKey = process.env.REACT_APP_API_KEY;
   const [weatherData, setWeatherData] = useState({});
   const [city, setCity] = useState("");
   const timezone = weatherData.timezone;
@@ -11,7 +12,10 @@ const App = () => {
   const currentTime = moment().utcOffset(timezoneInMinutes).format("HH:mm:ss");
   const [time, setTime] = useState("");
   const hours = parseInt(`${time[0]}${time[1]}`);
-
+  
+  
+  
+  
   const getWeather = (event) => {
     if (event.key === "Enter") {
       fetch(
